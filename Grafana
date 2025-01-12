@@ -1,0 +1,27 @@
+#Grafana Project
+Grafana  Installation:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-20-04
+
+Command to know whcih port is grafana running on:sudo  lsof -i -P
+Public IP:3000
+We will be creating a worldmap which will show us the cases of Covid 19 over the past 1 year.
+Installing Influx DB:
+https://medium.com/yavar/install-and-setup-influxdb-on-ubuntu-20-04-22-04-3d6e090ec70c
+
+command > influx
+show databases;
+ >create database card ovid19
+>show databases
+
+I have go to dashboard and choose datasource > Influx DB
+name:Infklux
+url: http://localhost:8086
+influx databse name:covid19
+save & test
+
+Go tp panels> worlmap> 
+worldmap installation: sudo grafana-cli plugins install grafana-worldmap-panel
+sudo service grafana-server restart
+Will download the dataset from track corona live ai
+sudo wget ..........
+Create python file:touch worldmap.py
